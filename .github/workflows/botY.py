@@ -1,6 +1,7 @@
 import time
 import random
 import requests
+from bs4 import BeautifulSoup
 
 # Lista linków do kolekcji
 collection_links = [
@@ -19,53 +20,26 @@ collection_links = [
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4160094&iaCode=all-departments&sortOrder=relevant"
 ]
 
-def fetch_product_links():
+def fetch_product_links(collection_url):
     """Pobiera linki do produktów w aktualnej kolekcji i filtruje tylko t-shirty."""
     product_links = []
-    for collection_url in collection_links:
-        try:
-            # Wysyłanie zapytania HTTP do strony
-            response = requests.get(collection_url)
-            if response.status_code == 200:
-                # Sprawdź, czy zawiera t-shirty, przykładowo przez analizowanie treści HTML (później możesz dodać bardziej zaawansowane filtrowanie)
-                if 't-shirt' in response.text.lower():
-                    product_links.append(collection_url)
-            else:
-                print(f"Nie udało się pobrać strony: {collection_url}")
-        except Exception as e:
-            print(f"Błąd podczas pobierania linków: {e}")
-    return product_links
-
-def visit_collection():
-    """Odwiedza kolekcje i wybiera t-shirty."""
-    print("Zbieram linki do t-shirtów...")
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    
     try:
-        # Pobierz linki do t-shirtów
-        product_links = fetch_product_links()
-        if not product_links:
-            print("Nie znaleziono t-shirtów.")
-            return
-
-        print(f"Znaleziono {len(product_links)} t-shirtów.")
-        
-        # Losowo odwiedzamy 3 t-shirty
-        random.shuffle(product_links)
-        for product_url in product_links[:3]:  # Ograniczamy do 3 linków
-            print(f"Odwiedzam t-shirt: {product_url}")
-            # Możesz dodać logikę np. zapisywania odwiedzin lub interakcji z linkiem
+        # Wysyłanie zapytania HTTP do strony
+        response = requests.get(collection_url, headers=headers)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, 'html.parser')
             
-    except Exception as e:
-        print(f"Błąd podczas przetwarzania kolekcji: {e}")
-
-def run_bot():
-    """Główna funkcja sterująca botem."""
-    try:
-        while True:  # Pętla nieskończona
-            visit_collection()
-            time.sleep(random.randint(30, 60))  # Przerwa między cyklami
+            # Znajdujemy wszystkie linki, które zawierają "/i/" (linki do produktów)
+            product_elements = soup.find_all('a', href=True)
             
-    except KeyboardInterrupt:
-        print("Bot został ręcznie zatrzymany.")
-
-if __name__ == "__main__":
-    run_bot()
+            for link in product_elements:
+                href = link['href']
+                if 't-shirt' in href.lower():  # Filtrowanie tylko t-shirtów
+                    product_links.append(f"https://www.redbubble.com{href}")
+        else:
+            print(f"Nie udało się pobrać strony: {collection_url}")
+ 
