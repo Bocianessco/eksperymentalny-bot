@@ -22,4 +22,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Uruchomienie bota
-        run: python bot.py
+        run: python boty.py
