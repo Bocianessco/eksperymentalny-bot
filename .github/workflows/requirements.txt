@@ -1,2 +1,2 @@
-pip install selenium
-pip install webdriver-manager
+requests
+beautifulsoup4  # Jeśli chcesz używać BeautifulSoup do parsowania HTML
