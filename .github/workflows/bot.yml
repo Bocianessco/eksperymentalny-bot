@@ -1,0 +1,25 @@
+name: Run Bot Every Hour
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Uruchamia co godzinę
+  workflow_dispatch:  # Pozwala uruchomić ręcznie
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pobierz repozytorium
+        uses: actions/checkout@v4
+
+      - name: Instalacja Pythona
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Instalacja zależności
+        run: |
+          pip install -r requirements.txt
+
+      - name: Uruchomienie bota
+        run: python bot.py
