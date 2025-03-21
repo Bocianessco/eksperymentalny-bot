@@ -1,2 +1,2 @@
 requests
-beautifulsoup4  # Jeśli chcesz używać BeautifulSoup do parsowania HTML
+beautifulsoup4
