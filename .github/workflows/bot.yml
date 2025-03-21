@@ -8,7 +8,7 @@ on:
 jobs:
   run-bot:
     runs-on: ubuntu-latest
-    steps:
+    steps: 
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
 
