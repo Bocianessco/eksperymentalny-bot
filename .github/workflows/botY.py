@@ -1,11 +1,6 @@
 import time
 import random
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from webdriver_manager.chrome import ChromeDriverManager
+import requests
 
 # Lista linków do kolekcji
 collection_links = [
@@ -24,63 +19,53 @@ collection_links = [
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4160094&iaCode=all-departments&sortOrder=relevant"
 ]
 
-def fetch_product_links(driver):
+def fetch_product_links():
     """Pobiera linki do produktów w aktualnej kolekcji i filtruje tylko t-shirty."""
     product_links = []
-    try:
-        WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//a[contains(@href, '/i/')]")))
-        product_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/i/')]")
-        
-        for link in product_elements:
-            href = link.get_attribute('href')
-            if href and 'Bocianessco' in href and 't-shirt' in href:  # Filtrowanie koszulek
-                product_links.append(href)
-    except Exception as e:
-        print(f"Błąd podczas pobierania linków do produktów: {e}")
+    for collection_url in collection_links:
+        try:
+            # Wysyłanie zapytania HTTP do strony
+            response = requests.get(collection_url)
+            if response.status_code == 200:
+                # Sprawdź, czy zawiera t-shirty, przykładowo przez analizowanie treści HTML (później możesz dodać bardziej zaawansowane filtrowanie)
+                if 't-shirt' in response.text.lower():
+                    product_links.append(collection_url)
+            else:
+                print(f"Nie udało się pobrać strony: {collection_url}")
+        except Exception as e:
+            print(f"Błąd podczas pobierania linków: {e}")
     return product_links
 
-def visit_collection(driver, collection_url):
-    """Odwiedza konkretną kolekcję i losowo wybiera produkty (tylko t-shirty) do przetworzenia."""
-    print(f"Otwieram kolekcję: {collection_url}")
+def visit_collection():
+    """Odwiedza kolekcje i wybiera t-shirty."""
+    print("Zbieram linki do t-shirtów...")
     try:
-        driver.get(collection_url)
-        time.sleep(random.randint(3, 6))  # Czekaj na załadowanie strony
-
-        # Pobierz tylko linki do koszulek
-        product_links = fetch_product_links(driver)
+        # Pobierz linki do t-shirtów
+        product_links = fetch_product_links()
         if not product_links:
-            print(f"Nie znaleziono koszulek w kolekcji: {collection_url}")
+            print("Nie znaleziono t-shirtów.")
             return
+
+        print(f"Znaleziono {len(product_links)} t-shirtów.")
         
-        print(f"Znaleziono {len(product_links)} koszulek w kolekcji.")
-        
-        # Odwiedź losowo wybrane t-shirty
+        # Losowo odwiedzamy 3 t-shirty
         random.shuffle(product_links)
-        for product_url in product_links[:3]:  # Ograniczamy do 3 losowych produktów
-            print(f"Przechodzę do t-shirtu: {product_url}")
-            driver.get(product_url)
-            time.sleep(random.randint(5, 10))  # Czekaj na załadowanie strony produktu
-                
+        for product_url in product_links[:3]:  # Ograniczamy do 3 linków
+            print(f"Odwiedzam t-shirt: {product_url}")
+            # Możesz dodać logikę np. zapisywania odwiedzin lub interakcji z linkiem
+            
     except Exception as e:
-        print(f"Błąd podczas przetwarzania kolekcji {collection_url}: {e}")
+        print(f"Błąd podczas przetwarzania kolekcji: {e}")
 
 def run_bot():
     """Główna funkcja sterująca botem."""
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=webdriver.ChromeOptions())
     try:
         while True:  # Pętla nieskończona
-            random.shuffle(collection_links)  # Losowa kolejność odwiedzania kolekcji
-            for collection_url in collection_links:
-                visit_collection(driver, collection_url)
-                time.sleep(random.randint(10, 20))  # Przerwa między kolekcjami
-            print("Zakończono cykl odwiedzania kolekcji. Rozpoczynam nowy cykl...")
-            time.sleep(random.randint(30, 60))  # Dłuższa przerwa między cyklami
+            visit_collection()
+            time.sleep(random.randint(30, 60))  # Przerwa między cyklami
             
     except KeyboardInterrupt:
         print("Bot został ręcznie zatrzymany.")
-        
-    finally:
-        driver.quit()
 
 if __name__ == "__main__":
     run_bot()
