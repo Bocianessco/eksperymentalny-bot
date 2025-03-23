@@ -73,7 +73,7 @@ def visit_product(driver, product_url):
 def visit_all_products(driver, base_url):
     """Funkcja do odwiedzania wszystkich produktów w kolekcji."""
     page_number = 1
-    while True:
+    while page_number <= 17:  # Tylko strony 1-17
         page_url = f"{base_url}{page_number}"
         log_message(f"Przechodzę na stronę: {page_url}")
         
