@@ -2,12 +2,13 @@ name: Run Bots Every Hour
 
 on:
   schedule:
-    - cron: "0 * * * *"  # Uruchamia co godzinę
+    - cron: "0 * * * *"  # Uruchamia co godzinę na początku każdej godziny
   workflow_dispatch:  # Pozwala uruchomić ręcznie
 
 jobs:
   run-bots:
     runs-on: ubuntu-latest
+    timeout-minutes: 20  # Ustawia limit czasu działania zadania na 20 minut
     strategy:
       matrix:
         bot: [botY.py, botX.py]
