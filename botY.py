@@ -25,39 +25,39 @@ collection_links = [
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4160094&iaCode=all-departments&sortOrder=relevant"
 ]
 
-def fetch_tshirt_links(driver):
-    """Pobiera linki do T-Shirtów na stronie."""
-    tshirt_links = []
+def fetch_product_links(driver):
+    """Pobiera linki do wszystkich produktów na stronie."""
+    product_links = []
     try:
-        WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//a[contains(@href, '/i/t-shirt/')]")))
-        product_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/i/t-shirt/')]")
+        WebDriverWait(driver, 10).until(EC.presence_of_all_elements_located((By.XPATH, "//a[contains(@href, '/i/')]")))
+        product_elements = driver.find_elements(By.XPATH, "//a[contains(@href, '/i/')]")
 
         for link in product_elements:
             href = link.get_attribute('href')
             if href and 'Bocianessco' in href:
-                tshirt_links.append(href)
+                product_links.append(href)
     except Exception as e:
-        print(f"Błąd podczas pobierania linków do T-Shirtów: {e}")
-    return tshirt_links
+        print(f"Błąd podczas pobierania linków do produktów: {e}")
+    return product_links
 
 def visit_collection(driver, collection_url):
-    """Odwiedza kolekcję i losowo wybiera T-Shirty."""
+    """Odwiedza kolekcję i losowo wybiera produkty."""
     print(f"Otwieram kolekcję: {collection_url}")
     try:
         driver.get(collection_url)
         time.sleep(random.randint(3, 6))
 
-        # Pobierz linki do T-Shirtów
-        tshirt_links = fetch_tshirt_links(driver)
-        if not tshirt_links:
-            print(f"Nie znaleziono T-Shirtów w kolekcji: {collection_url}")
+        # Pobierz linki do produktów
+        product_links = fetch_product_links(driver)
+        if not product_links:
+            print(f"Nie znaleziono produktów w kolekcji: {collection_url}")
             return
         
-        print(f"Znaleziono {len(tshirt_links)} T-Shirtów w kolekcji.")
+        print(f"Znaleziono {len(product_links)} produktów w kolekcji.")
         
-        # Odwiedź losowe T-Shirty
-        random.shuffle(tshirt_links)
-        for product_url in tshirt_links[:3]:
+        # Odwiedź losowe produkty
+        random.shuffle(product_links)
+        for product_url in product_links[:3]:
             print(f"Przechodzę do produktu: {product_url}")
             driver.get(product_url)
             time.sleep(random.randint(5, 10))
