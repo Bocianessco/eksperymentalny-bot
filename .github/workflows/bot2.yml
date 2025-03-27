@@ -8,7 +8,7 @@ on:
 jobs:
   run-bots:
     runs-on: ubuntu-latest
-    timeout-minutes: 20  # Ustawia limit czasu działania zadania na 20 minut
+    timeout-minutes: 70  # Ustawia limit czasu działania zadania na 70 minut (by zapewnić co najmniej godzinę)
     strategy:
       matrix:
         bot: [botY.py, botX.py]
@@ -28,3 +28,6 @@ jobs:
 
       - name: Uruchomienie bota
         run: python ${{ matrix.bot }}
+
+      - name: Czekanie przez godzinę
+        run: sleep 3600  # Czeka przez 3600 sekund, czyli 1 godzinę
