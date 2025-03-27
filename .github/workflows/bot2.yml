@@ -11,7 +11,7 @@ jobs:
     timeout-minutes: 70  # Ustawia limit czasu działania zadania na 70 minut (by zapewnić co najmniej godzinę)
     strategy:
       matrix:
-        bot: [botY.py, botX.py]
+        bot: [botY.py, botX.py botZ.py]
     steps:
       - name: Pobierz repozytorium
         uses: actions/checkout@v4
