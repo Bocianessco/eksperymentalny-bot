@@ -1,8 +1,8 @@
-name: Run Bots Every Hour
+name: Run Bots Twice a Day
 
 on:
   schedule:
-    - cron: "0 * * * *"  # Uruchamia co godzinę na początku każdej godziny
+    - cron: "0 4,18 * * *"  # Uruchamia o 04:00 i 18:00
   workflow_dispatch:  # Pozwala uruchomić ręcznie
 
 jobs:
