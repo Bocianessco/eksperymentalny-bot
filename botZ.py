@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 # URL Twojej strony
-TARGET_URL = 'https://twoja-strona.com'
+TARGET_URL = 'https://gogetfunding.com/help-create-custom-fuel-tank-covers-for-harley-davidson-sportster/'
 
 # Liczba wizyt w ciągu godziny
 NUM_VISITS = 15
