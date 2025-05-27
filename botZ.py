@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 # URL Twojej strony
-TARGET_URL = 'https://www.otodom.pl/pl/oferta/osiedle-zielona-dolina-gratis-miejsce-parkingowe-ID4wP97'
+TARGET_URL = 'https://www.otodom.pl/pl/oferta/osiedle-zielona-dolina-cicha-okolica-ID4vyMw?utm_campaign=share_button_1748331048409'
 
 # Liczba wizyt w ciągu godziny
 NUM_VISITS = 15
