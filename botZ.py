@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
 # URL Twojej strony
-TARGET_URL = 'https://www.otodom.pl/pl/oferta/osiedle-zielona-dolina-cicha-okolica-ID4vyMw?utm_campaign=share_button_1748331048409'
+TARGET_URL = 'https://www.redbubble.com/people/Bocianessco/shop?asc=u&ref=account-nav-dropdown'
 
 # Liczba wizyt w ciągu godziny
 NUM_VISITS = 15
@@ -55,3 +55,4 @@ def run_bot():
 
 if __name__ == "__main__":
     run_bot()
+
