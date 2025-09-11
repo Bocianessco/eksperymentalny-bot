@@ -11,9 +11,13 @@ from webdriver_manager.chrome import ChromeDriverManager
 # Lista linków do kolekcji
 collection_links = [
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141513&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/dress/Step-into-the-vibrant-world-of-Saja2-by-Bocianessco/173780217.V4WQ8",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141530&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/iphone-case/Step-into-the-vibrant-world-of-Hunt-rX2-by-Bocianessco/173786249.5HT9M",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141531&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/tote-bag/Step-into-the-vibrant-world-of-Hunt-rX3-by-Bocianessco/173786430.PJQVX",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141533&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/iphone-case/Step-into-the-vibrant-world-of-Saja6-by-Bocianessco/173781517.VMYCZ",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141534&iaCode=all-departments&sortOrder=relevant",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141535&iaCode=all-departments&sortOrder=relevant",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141536&iaCode=all-departments&sortOrder=relevant",
@@ -92,3 +96,4 @@ def run_bot():
 
 if __name__ == "__main__":
     run_bot()
+
