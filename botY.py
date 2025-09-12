@@ -19,9 +19,13 @@ collection_links = [
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141533&iaCode=all-departments&sortOrder=relevant",
     "https://www.redbubble.com/i/iphone-case/Step-into-the-vibrant-world-of-Saja6-by-Bocianessco/173781517.VMYCZ",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141534&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/t-shirt/Products-with-Your-Favorite-Memes10-by-Bocianessco/173829163.1YYVU",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141535&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/iphone-case/Iconic-Brainrots-Products-with-Your-Favorite-Memes2-by-Bocianessco/173824890.4UP47",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141536&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/iphone-case/Iconic-Brainrots-Products-with-Your-Favorite-Memes6-by-Bocianessco/173827907.4UP47",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141538&iaCode=all-departments&sortOrder=relevant",
+    "https://www.redbubble.com/i/hat/Iconic-Brainrots-Products-with-Your-Favorite-Memes3-by-Bocianessco/173825757.NJ288",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141539&iaCode=all-departments&sortOrder=relevant",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141540&iaCode=all-departments&sortOrder=relevant",
     "https://www.redbubble.com/people/bocianessco/shop?artistUserName=Bocianessco&collections=4141541&iaCode=all-departments&sortOrder=relevant",
@@ -96,4 +100,5 @@ def run_bot():
 
 if __name__ == "__main__":
     run_bot()
+
 
