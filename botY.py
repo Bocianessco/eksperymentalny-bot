@@ -10,11 +10,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # Lista linków do kolekcji
 collection_links = [
-    "https://www.redbubble.com/i/t-shirt/Print-on-Demand-Services-Customized-Printing-Solutions-by-Bocianessco/153667735.WFLAH",
-    "https://www.redbubble.com/i/t-shirt/wildboar-wildhog-v4-by-Bocianessco/157857934.NL9AC",
-    "https://www.redbubble.com/i/t-shirt/toro-v3-by-Bocianessco/157888359.UGYPM",
-    "https://www.redbubble.com/people/Bocianessco/shop?asc=u",
-    "https://gogetfunding.com/biankas-place-supporting-our-maine-coon-cattery/",
+    "https://www.redbubble.com/i/t-shirt/ERROR-404-Human-Not-Found-Glitch-Streetwear-Design-by-Bocianessco/179504127/xtkm",
+    "https://www.redbubble.com/i/iphone-case/Cultural-Fusion-Japanese-and-African-Pattern-Art-by-Bocianessco/179504531/c4kx",
+    "https://www.redbubble.com/i/t-shirt/The-World-Holds-Its-Breath-by-Bocianessco/179289865/rfjh",
+    "https://www.redbubble.com/i/mouse-pad/Battle-Royale-Showdown-Victory-Style-by-Bocianessco/179182372.GAP22",
+    "https://www.redbubble.com/i/coasters/Storm-of-Power-Political-Satire-War-Cartoon-Art-v3-by-Bocianessco/178909341.E5I3N",
+    "https://www.redbubble.com/i/laptop-case/The-Symbolism-Here-Is-Brutal-by-Bocianessco/179092731.2U5KG",
+    "https://www.redbubble.com/i/t-shirt/Ultimate-Battle-Quest-Digital-Conquerors-by-Bocianessco/179183139/rfjh",
+    "https://www.redbubble.com/i/mug/Rumble-and-Ride-by-Bocianessco/179402738.9Q0AD",
   
 ]
 
