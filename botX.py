@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 
 # URL Twojej kolekcji
-BASE_URL = 'https://viralstyle.com/store/maciekilcewicz/bocianessco/'
+BASE_URL = "https://www.redbubble.com/people/Bocianessco/shop?asc=u"
 
 # Lista User-Agentów
 USER_AGENTS = [
