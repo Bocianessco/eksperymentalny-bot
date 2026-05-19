@@ -10,14 +10,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # Lista linków do kolekcji
 collection_links = [
-    "https://www.redbubble.com/i/t-shirt/ERROR-404-Human-Not-Found-Glitch-Streetwear-Design-by-Bocianessco/179504127/xtkm",
-    "https://www.redbubble.com/i/iphone-case/Cultural-Fusion-Japanese-and-African-Pattern-Art-by-Bocianessco/179504531/c4kx",
-    "https://www.redbubble.com/i/t-shirt/The-World-Holds-Its-Breath-by-Bocianessco/179289865/rfjh",
-    "https://www.redbubble.com/i/mouse-pad/Battle-Royale-Showdown-Victory-Style-by-Bocianessco/179182372.GAP22",
-    "https://www.redbubble.com/i/coasters/Storm-of-Power-Political-Satire-War-Cartoon-Art-v3-by-Bocianessco/178909341.E5I3N",
-    "https://www.redbubble.com/i/laptop-case/The-Symbolism-Here-Is-Brutal-by-Bocianessco/179092731.2U5KG",
-    "https://www.redbubble.com/i/t-shirt/Ultimate-Battle-Quest-Digital-Conquerors-by-Bocianessco/179183139/rfjh",
-    "https://www.redbubble.com/i/mug/Rumble-and-Ride-by-Bocianessco/179402738.9Q0AD",
+    "https://www.redbubble.com/i/sweatshirt/Storm-of-Power-Political-Satire-War-Cartoon-Art-v3-by-Bocianessco/178909341/cdux",
+    "https://www.redbubble.com/i/hoodie/Storm-of-Power-Political-Satire-War-Cartoon-Art-v1-by-Bocianessco/178908431/ng59",
+    "https://www.redbubble.com/i/t-shirt/The-Future-Is-Tired-Dark-Aesthetic-Streetwear-Graphic-by-Bocianessco/179504173/z4fd",
+    "https://www.redbubble.com/i/t-shirt/ERROR-404-Human-Not-Found-Glitch-Streetwear-Design-by-Bocianessco/179504127/rfjh",
+    "https://www.redbubble.com/i/t-shirt/Game-On-Always-by-Bocianessco/179323615/e22z",
+    "https://www.redbubble.com/i/t-shirt/Brotherhood-on-Wheels-by-Bocianessco/179403212/rfjh",
+    "https://www.redbubble.com/i/sweatshirt/The-Symbolism-Here-Is-Brutal-by-Bocianessco/179092731/cdux",
+    "https://www.redbubble.com/i/sweatshirt/Storm-of-Power-Political-Satire-War-Cartoon-Art-v3-by-Bocianessco/178909341/cdux",
   
 ]
 
