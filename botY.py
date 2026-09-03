@@ -10,14 +10,14 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # Lista linków do kolekcji
 collection_links = [
-    "https://www.redbubble.com/i/sweatshirt/Storm-of-Power-Political-Satire-War-Cartoon-Art-v3-by-Bocianessco/178909341/cdux",
-    "https://www.redbubble.com/i/hoodie/Storm-of-Power-Political-Satire-War-Cartoon-Art-v1-by-Bocianessco/178908431/ng59",
-    "https://www.redbubble.com/i/t-shirt/The-Future-Is-Tired-Dark-Aesthetic-Streetwear-Graphic-by-Bocianessco/179504173/z4fd",
-    "https://www.redbubble.com/i/t-shirt/ERROR-404-Human-Not-Found-Glitch-Streetwear-Design-by-Bocianessco/179504127/rfjh",
-    "https://www.redbubble.com/i/t-shirt/Game-On-Always-by-Bocianessco/179323615/e22z",
-    "https://www.redbubble.com/i/t-shirt/Brotherhood-on-Wheels-by-Bocianessco/179403212/rfjh",
-    "https://www.redbubble.com/i/sweatshirt/The-Symbolism-Here-Is-Brutal-by-Bocianessco/179092731/cdux",
-    "https://www.redbubble.com/i/sweatshirt/Storm-of-Power-Political-Satire-War-Cartoon-Art-v3-by-Bocianessco/178909341/cdux",
+    "https://www.redbubble.com/i/t-shirt/I-Don-t-Just-Use-AI-I-Ask-My-Wife-First-Funny-by-Bocianessco/183126890/lrcw",
+    "https://www.redbubble.com/i/sweatshirt/My-Wife-Doesn-t-Ask-ChatGPT-ChatGPT-Asks-My-Wife-by-Bocianessco/183126665/cdux",
+    "https://www.redbubble.com/i/sweatshirt/ERROR-404-Human-Not-Found-Glitch-Streetwear-Design-by-Bocianessco/179504127/cdux",
+    "https://www.redbubble.com/i/t-shirt/The-Future-Is-Tired-Dark-Aesthetic-Streetwear-Graphic-by-Bocianessco/179504173/lrcw",
+    "https://www.redbubble.com/i/tote-bag/Geopolitical-Chess-USA-Israel-vs-Iran-Political-Satire-Cartoon-by-Bocianessco/179009021/7prg",
+    "https://www.redbubble.com/i/t-shirt/Storm-of-Power-Political-Satire-War-Cartoon-Art-v1-by-Bocianessco/178908431/xtkm",
+    "https://www.redbubble.com/i/t-shirt/Play-Smart-Win-Hard-by-Bocianessco/179323525/dpsq",
+    "https://www.redbubble.com/i/t-shirt/Level-Up-Everything-by-Bocianessco/179323441/dpsq",
   
 ]
 
