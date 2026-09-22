@@ -18,6 +18,7 @@ collection_links = [
     "https://www.redbubble.com/i/t-shirt/Storm-of-Power-Political-Satire-War-Cartoon-Art-v1-by-Bocianessco/178908431/xtkm",
     "https://www.redbubble.com/i/t-shirt/Play-Smart-Win-Hard-by-Bocianessco/179323525/dpsq",
     "https://www.redbubble.com/i/t-shirt/Level-Up-Everything-by-Bocianessco/179323441/dpsq",
+    "https://viralstyle.com/store/maciekilcewicz/gifts-4-daddys",
   
 ]
 
