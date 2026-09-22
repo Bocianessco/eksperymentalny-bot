@@ -19,6 +19,10 @@ collection_links = [
     "https://www.redbubble.com/i/t-shirt/Play-Smart-Win-Hard-by-Bocianessco/179323525/dpsq",
     "https://www.redbubble.com/i/t-shirt/Level-Up-Everything-by-Bocianessco/179323441/dpsq",
     "https://viralstyle.com/store/maciekilcewicz/gifts-4-daddys",
+    "https://viralstyle.com/maciekilcewicz/father-daughter-motorcycle-legacy-4#sid=back",
+    "https://viralstyle.com/maciekilcewicz/father-daughter-motorcycle-legacy-3#pid=5&cid=202&sid=back",
+    "https://viralstyle.com/maciekilcewicz/father-daughter-motorcycle-legacy-2#sid=back",
+    "https://viralstyle.com/maciekilcewicz/father-daughter-motorcycle-legacy-1#sid=back&pid=5&cid=182",
   
 ]
 
