@@ -17,6 +17,16 @@ collection_links = [
     "https://viralstyle.com/maciekilcewicz/sons-of-arthritis-ride-slow-or-dont",
     "https://viralstyle.com/maciekilcewicz/sons-of-autism-different-minds-same-ri",
     "https://viralstyle.com/maciekilcewicz/sons-of-altzhaimer-who-how-where",
+    "https://www.redbubble.com/i/t-shirt/Forgot-Where-We-Parked-MC-Funny-Vintage-Skull-Biker-Club-by-Bocianessco/185846922/lrcw",
+    "https://www.redbubble.com/i/t-shirt/Rusty-Joints-Riding-Club-Old-School-Biker-Still-Full-Throttle-by-Bocianessco/185846832/z5wf",
+    "https://www.redbubble.com/i/t-shirt/Different-Minds-Riding-Club-Ride-Your-Own-Road-Skull-Biker-Art-by-Bocianessco/185846731/lrcw",
+    "https://www.redbubble.com/i/t-shirt/Mustardos-MC-Hot-Heads-Cold-Beer-Vintage-Skull-Biker-Motorcycle-Art-by-Bocianessco/185846622/e22z",
+    "https://www.redbubble.com/i/t-shirt/Mayonnaise-MC-Spread-the-Chaos-Funny-Biker-Skull-Motorcycle-Club-by-Bocianessco/185846046/2cn5",
+    "https://www.redbubble.com/i/t-shirt/Ketchupas-MC-Born-to-Squeeze-Funny-Skull-Biker-Motorcycle-Club-by-Bocianessco/185845913/z5wf",
+    "https://www.redbubble.com/i/apron/Christmas-Chaos-Funny-Christmas-Design-for-Holiday-Lovers-by-Bocianessco/185744596/2b5j",
+    "https://www.redbubble.com/i/t-shirt/Santa-s-Favorite-Problem-Funny-Christmas-Holiday-Design-by-Bocianessco/185744492/rfjh",
+    "https://www.redbubble.com/i/dress/Christmas-Calories-Don-t-Count-Funny-Holiday-Gift-by-Bocianessco/185743473/3yb7",
+    "https://www.redbubble.com/i/dress/Funny-Christmas-Couple-Design-Santa-s-Favorite-Trouble-Makers-Humorous-Holiday-Art-Festive-Christmas-Gift-by-Bocianessco/185741987/3yb7",
 ]
 
 def fetch_product_links(driver):
